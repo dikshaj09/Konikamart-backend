@@ -8,9 +8,7 @@
     "start": "node backend/server.js",
     "server": "nodemon backend/server.js",
     "data:import": "node backend/seeder.js -i",
-    "data:destroy": "node backend/seeder.js",
-    "build": "cd client && npm install --legacy-peer-deps && npm run build",
-    "vercel-build": "cd client && npm install --legacy-peer-deps && npm run build"
+    "data:destroy": "node backend/seeder.js"
   },
   "author": "",
   "license": "MIT",
