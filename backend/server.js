@@ -18,11 +18,13 @@ import { fileURLToPath } from 'url';
 connectDB();
 
 const app = express();
-const port = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5000;
 
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
-});
+if (process.env.NODE_ENV !== 'production') {
+  app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+  });
+}
 
 app.use(cors({
   origin: process.env.NODE_ENV === 'production' 
